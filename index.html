@@ -1,123 +1,285 @@
 -<!DOCTYPE html>
-<html lang="en"><img src="html1.jpg" alt="Ảnh Tết 2026" style="max-width:100%; height:auto;">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tet in Vietnam </title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fff8f0;
-    color: #333;
-    line-height: 1.6;
-}
-header {
-    background: #c40000;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-nav {
-    background: #ffcc00;
-    padding: 10px;
-    text-align: center;
-}
-nav a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-section {
-    padding: 40px;
-}
-h2 {
-    color: #c40000;
-}
-footer {
-    background: #c40000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-.highlight {
-    background: #ffeaa7;
-    padding: 10px;
-    border-left: 5px solid red;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar New Year - The Spirit of Vietnam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red-tet: #D32F2F;
+            --gold-tet: #FFD700;
+            --dark-tet: #1a1a1a;
+            --text-light: #f4f4f4;
+            --background-light: #fffaf0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: var(--background-light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--red-tet);
+            color: var(--gold-tet);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 5px solid var(--gold-tet);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        nav {
+            background: var(--dark-tet);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.2s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            color: var(--gold-tet);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Traditional Tet decorations */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+            animation: fadeInScale 1.5s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--red-tet);
+            border-bottom: 3px solid var(--gold-tet);
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+        }
+
+        .image-full-width {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--background-light);
+            padding: 20px;
+            border-left: 5px solid var(--red-tet);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--dark-tet);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-tet);
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+            border-top: 5px solid var(--gold-tet);
+        }
+    </style>
 </head>
 <body>
+
 <header>
-    <h1>TET(LUNAR NEW YEAR)</h1>
-    <p>A Celebration of Culture, Family, and New Beginnings</p>
+    <h1>TET IN VIETNAM </h1>
+    <p>Vietnamese Lunar New Year - A Celebration of Renewal and Heritage</p>
 </header>
 
 <nav>
-    <a href="#history">History</a>
-    <a href="#tet">Tet Holiday</a>
-    <a href="#traditions">Traditions</a>
-    <a href="#global">Global Celebration</a>
+    <a href="#origins">Historical Origins</a>
+    <a href="#about">Tet in Vietnam</a>
+    <a href="#traditions">Important Traditions</a>
+    <a href="#global">Global Celebrations</a>
 </nav>
 
-<section id="history">
-<h2>Historical Origins</h2>
-<p>Lunar New Year is one of the most important and meaningful festivals in many Asian countries,
-especially in China, Vietnam, Korea, and Southeast Asia. It marks the beginning of the new year
-according to the lunar calendar and usually takes place in late January or early February.</p>
-<p>The history of Lunar New Year goes back thousands of years. People believed the new year was
-a chance to say goodbye to bad luck and welcome good fortune. Farmers celebrated the end of
-the farming year and hoped for good weather and a successful harvest.</p>
-</section>
+<div class="hero">
+    <h1>Happy Lunar New Year!</h1>
+</div>
 
-<section id="tet">
-<h2>Tet Holiday in Vietnam</h2>
-<img src="Tet Holiday in Vietnam.jpg" alt="Mô tả ảnh"style="max-width:100%; height:auto;">
+<div class="container">
+    
+    <section id="origins">
+        <h2>Historical Origins</h2>
+        <img src="https://images.unsplash.com/photo-1610486822818-b0a0e9a0c2c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Ancient Vietnamese settlement during harvest" class="image-full-width">
+        <p>The origins of Tet are deeply rooted in the agricultural history of East Asia. While influenced by the Chinese calendar, the Vietnamese Tet has developed its own unique cultural identity over thousands of years. It represents a fresh start, signifying the end of winter and the arrival of spring, a time for growth and renewal.</p>
+        <p>Legend has it that Tet dates back to the era of the Hung Kings, the mythical founders of Vietnam. It was originally a festival for farmers to thank the gods for a bountiful harvest and to pray for favorable weather in the coming year. This ancient connection to the land and its cycles remains a core aspect of Tet's significance even today.</p>
+    </section>
 
-<p>Tet Holiday is the most significant traditional celebration in Vietnam.
-Several weeks before Tet, families clean and decorate their homes beautifully.
-Preparing for Tet is not only about food and decorations but also about spiritual values.</p>
+    <section id="about">
+        <h2>Tet Holiday in Vietnam</h2>
+        <img src="https://images.unsplash.com/photo-1596775681635-43037f07e5e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Family celebrating Tet in Vietnam" class="image-full-width">
+        <p>Tet Nguyên Đán, or simply <strong>Tet</strong>, is the most important and sacred festival in Vietnam. It usually falls between late January and mid-February, depending on the lunar calendar. This period marks a nationwide holiday, with schools and businesses closing as the country focuses on family and tradition.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vietnamese family reunion">
+                <h3>Family Reunions</h3>
+                <p>No matter how far they are, Vietnamese people try to return home to celebrate with their families. It is a time for "Sum Hop" (reunion), strengthening family bonds and honoring ancestors.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1572973809618-9c59530462ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Peach blossoms and Ochna flowers">
+                <h3>Spring Atmosphere</h3>
+                <p>The streets are decorated with vibrant red banners and lanterns, and homes are filled with the scent of incense and fresh flowers like Peach blossoms (North) or Ochna flowers (South), symbolizing prosperity and good fortune.</p>
+            </div>
+        </div>
+    </section>
 
-<div class="highlight">
-Traditional dishes such as Banh Chung and Banh Tet are prepared as symbols of gratitude and family unity.</div>
-<p>Tet is a time for people to reflect on the past year, express gratitude to ancestors,
-and set positive goals for the future.</p></section>
-<img src="ảnh tết 2026.jpg" alt="ảnh tết 2026"style="max-width:100%; height:auto;">
-<section id="traditions">
-<h2>Important Traditions</h2>
-<h3>Red Envelopes (Hongbao)</h3>
-<p>Red envelopes symbolize good fortune and prosperity. Elders give them to younger family members.
-The red color represents happiness and protection from evil spirits.</p>
-<h3>Reunion Dinner</h3>
-<p>The Reunion Dinner takes place on New Year's Eve. Families gather together to share food,
-show gratitude, and welcome a prosperous new year.</p>
-<h3>Lion Dance and Dragon Dance</h3>
-<p>Lion and dragon dances are vibrant performances believed to bring good luck
-and drive away evil spirits. They are accompanied by drums and cymbals.</p>
-<h3>Firecrackers and Fireworks</h3>
-<p>Firecrackers and fireworks are used to scare away evil spirits and negative energy.
-This tradition comes from the legend of the monster Nian.</p>
-<h3>New Year Markets and Fairs</h3>
-<p>Markets before Lunar New Year are full of decorations, traditional foods,
-street games, and cultural performances.</p></section>
+    <section id="traditions">
+        <h2>Important Traditions</h2>
+        <img src="https://images.unsplash.com/photo-1590483861864-7d5d7e5b6a7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="People making Banh Chung for Tet" class="image-full-width">
+        <p>Tet is a time rich with customs and rituals, each carrying deep symbolic meaning for good luck and prosperity in the coming year.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610486822818-b0a0e9a0c2c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ancestral altar during Tet">
+                <h3>Tat Nien & Giao Thua</h3>
+                <p><strong>Tat Nien</strong> is the year-end meal, often a grand feast. <strong>Giao Thua</strong> is the New Year's Eve transition moment, marked by offerings to ancestors and Kitchen Gods, and often fireworks.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1579208030256-427958055609?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Lucky money in red envelopes">
+                <h3>Lucky Money (Li Xi)</h3>
+                <p>Elderly people and adults give red envelopes containing "lucky money" to children and younger relatives, wishing them health, happiness, and success.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582239611689-ff828e8f8c9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Banh Chung and Banh Tet">
+                <h3>Traditional Foods</h3>
+                <p><strong>Banh Chung</strong> (square sticky rice cake, North) and <strong>Banh Tet</strong> (cylindrical sticky rice cake, South) are central to Tet, symbolizing the Earth and gratitude to ancestors. Other dishes include Gio Cha, Nem Ran, and various candies.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611736952865-b7781b0a51c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="People welcoming guests on Tet">
+                <h3>First Footer (Xong Dat)</h3>
+                <p>The first person to enter a house in the New Year is believed to determine the family's luck for the entire year. A carefully chosen "first footer" is crucial.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="global">
-<h2>Global Celebrations</h2><img src="Fireworks_show_during_Chinese_New_Year_2012.jpg" alt="Mô tả ảnh"style="max-width:100%; height:auto;">
-<p>Lunar New Year is celebrated worldwide. In China, there are grand parades and fireworks.
-In Vietnam, people celebrate Tet Nguyen Dan and enjoy traditional foods like banh chung.</p>
-<img src="Goi_banh_chung.jpg" alt="Mô tả ảnh"style="max-width:100%; height:auto;"></section>
+    <section id="global">
+        <h2>Global Celebrations</h2>
+        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Vietnamese Tet celebration in a foreign country" class="image-full-width">
+        <p>Today, Tet is not just limited to the borders of Vietnam. With millions of Vietnamese people living abroad, the spirit of Tet shines across the globe, bringing communities together and sharing cultural richness.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611736952865-b7781b0a51c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tet parade in Little Saigon, USA">
+                <h3>Little Saigon (USA)</h3>
+                <p>Vibrant celebrations in areas like Westminster, California, feature massive parades, lion dances, and bustling flower markets, mirroring the atmosphere in Vietnam.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582239611689-ff828e8f8c9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vietnamese festival in Australia">
+                <h3>Australia</h3>
+                <p>Major cities like Melbourne and Sydney host large-scale Tet festivals, showcasing traditional performances, food stalls, and community gatherings.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590483861864-7d5d7e5b6a7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tet celebration in Europe">
+                <h3>Europe</h3>
+                <p>Vietnamese communities in cities like Paris, Berlin, and London organize cultural events, allowing overseas Vietnamese to celebrate and introduce their heritage to a wider audience.</p>
+            </div>
+        </div>
+        <p>These global celebrations serve as a vital bridge, connecting the younger generation of overseas Vietnamese to their ancestral roots and sharing the beauty of Vietnamese culture with international friends, fostering understanding and appreciation worldwide.</p>
+    </section>
+
+</div>
 
 <footer>
-<h2>Thank You for Reading</h2>
-<p>
-Hopefully this presentation adds insight about Lunar New Year  
-If you have any questions, please contact us via email(nu13062008nu@gmail.com) or hotline(0372080952)
-</p>
+    <p>&copy; 2026 Vietnamese Culture Exploration.Hopefully this presentation adds insight about Lunar New Year  
+If you have any questions, please contact us via email(nu13062008nu@gmail.com) or hotline(0372080952)</p>
 </footer>
 
 </body>
 </html>
+
 
 
 
